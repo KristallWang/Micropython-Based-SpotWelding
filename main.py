@@ -14,11 +14,11 @@ OledRST.on()
 WeldPin = Pin(45, Pin.OUT) #光耦，低电位时激活
 Button = ADC(Pin(7)) #, Pin.IN, Pin.PULLUP)) #按钮输入，30k上拉无触发，18.65k时按钮-，13.6k时按钮+，7.8k时按钮切换
 Button.atten(ADC.ATTN_11DB)  #设置11db衰减
-pin_buttonup     = Pin(1, Pin.IN, Pin.PULL_UP)
-pin_buttondown   = Pin(2, Pin.IN, Pin.PULL_UP)
-pin_buttonswitch = Pin(40, Pin.IN, Pin.PULL_UP)
-pin_buttontrigger= Pin(5, Pin.IN, Pin.PULL_UP)
-pin_button_reserved = Pin(35, Pin.IN, Pin.PULL_UP)
+pin_buttonup     = Pin(1, Pin.IN, Pin.PULL_UP)     #增加数值，按钮另一端引脚连接GND
+pin_buttondown   = Pin(2, Pin.IN, Pin.PULL_UP)     #减少数值，按钮另一端引脚连接GND
+pin_buttonswitch = Pin(40, Pin.IN, Pin.PULL_UP)    #切换数值，按钮另一端引脚连接GND
+pin_buttontrigger= Pin(5, Pin.IN, Pin.PULL_UP)     #焊接触发，按钮另一端引脚连接GND
+pin_button_reserved = Pin(35, Pin.IN, Pin.PULL_UP) #预留按钮，按钮另一端引脚连接GND
 i2c = I2C(1,scl=Pin(18), sda=Pin(17))
 oled = SSD1306_I2C(128, 64, i2c)
 oled.fill(0)
