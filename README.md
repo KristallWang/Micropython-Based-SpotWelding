@@ -1,5 +1,7 @@
 # Micropython-Based-SpotWelding
+![](IMG_6074.jpeg)
 
+![](IMG_6075.jpeg)
 # 中文
 其实我烧了两块MCU了，心情有点儿差。 （因为两次都是绝缘没做好）<br>
 程序很简单，但是我有些bug还没来得及处理，因为MCU已经烧坏了，虽然串口芯片好像还没事儿
